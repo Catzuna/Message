@@ -52,7 +52,7 @@ Gradwaiting na tayo, kaya push natin ‘to! Keep your head up, keep pushing forw
 
 
 
-  "1229": `Lea 💐,
+  "1228": `Lea 💐,
 
 Hi Lea HAHAHAHA! 😹 Thank you so much sa lahat ng memories — lalo na sa mga sawa mong bulaklak! instant provider yern hahahssh 🌼 Seryoso, sobrang na-appreciate ko ‘yon teh. 🌻
 
