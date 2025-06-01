@@ -113,8 +113,15 @@ Soju mo, wag mong kalimutan ha! HAHAHA
 Sana soonn makabond ko pa ulit kayo ni Biya. huhuhu hiram nmn manalo talo nanaman HAAHSHHAHSHAHAHSA😭
 
 Ingat palagi, and stay being you. Chill lang, pero always moving forward.
-Congrats ulit Aybe, kita kits soon! 🎓`
-};
+Congrats ulit Aybe, kita kits soon! 🎓`,
+
+  "0826": `Ally 🐱,
+ Hey Ally, just wanted to say a big THANK U for being part of this journey. You've made it through all the challenges, the late nights, the stress, and the deadlines, HAHAHA
+ Goodluckk satenn salaman sa pakikinig sa mga rants koo HAHAHAHAHAHAHAHHA,  I'm really proud of you. You’ve worked so hard, and you deserve every bit of happiness and success coming your way. Enjoy this moment, celebrate it fully, and always remember: you did it!
+ Congratulations again, Graduate! 🎓💐
+  
+
+'};
 
 
 
