@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meowssage</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- PIN Lock Screen -->
+  <div id="pin-screen" class="screen">
+    <div class="lock-container">
+      <h2 class="title">Enter Mreowcode</h2>
+      <p class="note">Please enter the 4-Mreow PIN to continue.</p>
+      <div id="pin-dots" class="dots">
+        <span></span><span></span><span></span><span></span>
+      </div>
+      <div class="numpad">
+        <div class="num" onclick="press(1)">1</div>
+        <div class="num" onclick="press(2)">2</div>
+        <div class="num" onclick="press(3)">3</div>
+        <div class="num" onclick="press(4)">4</div>
+        <div class="num" onclick="press(5)">5</div>
+        <div class="num" onclick="press(6)">6</div>
+        <div class="num" onclick="press(7)">7</div>
+        <div class="num" onclick="press(8)">8</div>
+        <div class="num" onclick="press(9)">9</div>
+        <div class="empty"></div>
+        <div class="num" onclick="press(0)">0</div>
+        <div class="num del" onclick="del()">⌫</div>
+      </div>
+      <div id="retry-msg" class="retry-msg"></div>
+    </div>
+  </div>
+
+  <!-- Emoji Container -->
+  <div id="emoji-container" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; z-index: 9999;"></div>
+
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="screen hidden">
+    <div class="loader-wrap">
+      <div class="loader-circle">
+        <div class="spinner"></div>
+        <div id="percent">0%</div>
+        <div class="floating-icons">
+          <span>💜</span>
+          <span>✨</span>
+          <span>🌸</span>
+          <span>☄️</span>
+        </div>
+      </div>
+      <p id="loading-text">Loading your magic 💫</p>
+    </div>
+  </div>
+
+  <!-- Message Screen -->
+  <div id="message-screen" class="screen hidden">
+    <div class="letter">
+      <h2>🎓 Graduate Na Tayo??!?</h2>
+      <p id="message-text"></p>
+      <button id="secret-btn" class="hidden" onclick="showLeiSecret()">Mreow 💌</button>
+      <p id="secret-message" class="hidden" style="margin-top: 15px; font-style: italic; color: #8e44ad;"></p>
+    </div>
+  </div>
+
+  <!-- Audio -->
+  <audio id="bg-music" loop>
+    <source src="Ed Sheeran - Photograph (Official Lyric Video).mp3" type="audio/mp3" />
+  </audio>
+
+  <audio id="music-someday" loop>
+    <source src="Someday.mp3" type="audio/mp3" />
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
