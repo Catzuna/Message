@@ -25,6 +25,17 @@ Pahabol lang sa rant... feel ko wala talaga akong chance kay Lei 😅 but i will
 Let’s keep pushing and reach our dreams. We’re almost there! 🎓`,
 
 
+"0928": `Sam 🐢,
+This letter was supposed to be for your graduation, but alam mo naman… life, healing, and all that stuff got in the way. 😅 Still, I want you to know how proud I am of you. I hope you stay strong no matter what challenges come your way — I know you can handle anything life throws at you.
+
+Congrats, grad!! Maam Samm?? 🎓
+And… sorry for leaving without a proper goodbye. Alam kong ang laki ng pagkukulang ko, and yet, you still stayed and understood. I’ll forever be grateful for that.
+
+Maybe in the future, you’ll still accept me — though I kinda feel like... hindi na? HAHAHA 😆 But that’s okay. What matters is you're doing great, and I’m starting to do better too. I'm working on becoming someone worth keeping. 😊
+
+I hope you're happy and healing too, in your own way. Miss u, hatdog. 🌭🐢`,
+
+
 
 
 
@@ -411,12 +422,23 @@ function showMessageScreen(pin) {
   });
 
   if (pin === "0629") {
-    // Show the button after animation completes
-    setTimeout(() => {
-      secretBtn.classList.remove("hidden");
-      secretBtn.classList.add("glow-button");
-    }, words.length * 250 + 500); // +500ms buffer
-  }
+  // Show secret button immediately
+  secretBtn.classList.remove("hidden");
+  secretBtn.classList.add("glow-button");
+
+  // Create a new glowing button (for another link)
+  const extraBtn = document.createElement("button");
+  extraBtn.textContent = "For U ;>>";
+  extraBtn.className = "glow-button";
+  extraBtn.style.marginTop = "1rem";
+  extraBtn.onclick = () => {
+    window.location.href = "lei.html"; // Update this if needed
+  };
+
+  // Append below the message box
+  document.querySelector(".letter").appendChild(extraBtn);
+}
+
 
   // On click secret button
   secretBtn.onclick = () => {
@@ -595,3 +617,18 @@ function summonRandomEmoji(x, y) {
     emoji.remove();
   }, 1000);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
