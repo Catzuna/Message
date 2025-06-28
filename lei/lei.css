@@ -303,20 +303,27 @@ body::-webkit-scrollbar { display: none; }
 }
 
 
-/* ✨ Light Purple Glowing Words with Spacing & Readability */
+/* === Letter Glow Purple === */
 .glow-word {
   display: inline-block;
+  margin-right: 5px;
   font-family: 'Georgia', serif;
-  color: #222; /* Dark text for readability inside white box */
-  margin-right: 5px; /* ✅ Ensures spacing between words */
-  text-shadow:
-    0 0 4px #d6b3ff,
-    0 0 8px #eecbff,
-    0 0 12px #caaeff;
-  animation: glowWave 3s ease-in-out infinite;
-  opacity: 1;
-  transition: all 0.3s ease-in-out;
+  color: #222;
+  text-shadow: 0 0 4px #d6b3ff, 0 0 8px #eecbff, 0 0 12px #caaeff;
+  animation: glowPurpleWave 3s ease-in-out infinite;
 }
+
+@keyframes glowPurpleWave {
+  0%, 100% {
+    text-shadow: 0 0 2px #caaeff, 0 0 6px #eecbff;
+    opacity: 0.9;
+  }
+  50% {
+    text-shadow: 0 0 8px #eecbff, 0 0 14px #d6b3ff, 0 0 20px #caaeff;
+    opacity: 1;
+  }
+}
+
 
 /* 🔮 Smooth light purple glow pulse */
 @keyframes glowWave {
@@ -520,3 +527,64 @@ body::-webkit-scrollbar { display: none; }
 }
 
 
+
+
+
+
+
+/* ⏳ White Glowing Countdown Numbers */
+#time-counter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 5px 12px;
+  font-size: 1.3rem;
+  font-family: 'Georgia', serif;
+}
+
+#time-counter .glow-word {
+  min-width: 52px;
+  text-align: center;
+  color: #111;
+  text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff;
+  animation: glowWave 4s ease-in-out infinite;
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes glowWave {
+  0%, 20% {
+    text-shadow: 0 0 3px #fff, 0 0 5px #fff;
+    opacity: 0.85;
+  }
+  40% {
+    text-shadow: 0 0 10px #fff, 0 0 16px #fff, 0 0 24px #fff;
+    opacity: 1;
+  }
+  45% {
+    text-shadow: 0 0 14px #fff, 0 0 24px #fff, 0 0 36px #fff;
+    opacity: 1;
+  }
+  70% {
+    text-shadow: 0 0 8px #fff, 0 0 14px #fff;
+    opacity: 0.95;
+  }
+  100% {
+    text-shadow: 0 0 3px #fff, 0 0 6px #fff;
+    opacity: 0.8;
+  }
+}
+
+
+/* 📱 Mobile Responsive Adjustments */
+@media (max-width: 480px) {
+  #time-counter {
+    font-size: 1.1rem;
+    gap: 8px;
+  }
+
+  #time-counter .glow-word {
+    min-width: 38px;
+  }
+}

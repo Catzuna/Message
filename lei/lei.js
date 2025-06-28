@@ -110,16 +110,77 @@ document.getElementById("close-letter").addEventListener("click", () => {
 
 // === LETTER RENDER ===
 function renderLetter() {
-  const msg = `Dear Lei,
+  const msg = `Happy Birthday, Lei! ✨💜,
 
-On this special day, I just want to say how incredibly grateful I am to have someone as inspiring, kind, and wonderful as you.
 
-May your birthday be filled with pure happiness, laughter that echoes, and memories that stay forever. 💖
+I hope today makes you feel as special as you really are—not just because it’s your birthday🎉, but because you deserve to be celebrated every day🎉🥳.
 
-Always rooting for your brightest days ahead.
+You’ve come so far, and I hope you’re proud of yourself💜. I know I am.
+Every little thing you do, your strength, your gentleness, your effort—it never goes unnoticed.
 
-With love and sparkles,
-— 💌`;
+
+
+I still remember the little routine we had—
+how I’d always wait for you at 7-Eleven, just so we could go together.
+
+Simple lang ‘yon, pero ang saya ko na HAHA
+And those moments when I cooked for you…
+
+
+the way you'd light up, even just a little, made everything feel worth it.
+
+
+
+
+
+Minsan nga, napapaisip ako—
+maybe all those small efforts I made to be near you,
+were really just quiet ways of saying I wanted to be part of your day.
+
+
+
+	
+
+
+
+
+I just want to be honest—I like you.
+
+
+
+
+
+
+
+Not in a big dramatic way, just real. I enjoy being around you. I think about you more than I admit. And I care, more than you probably know.
+
+
+
+
+I want you.
+
+
+
+
+Not just in the moment, not just in passing—
+but in a way where I genuinely want to pursue you,
+to get to know you even deeper,
+and to show you how serious I am about this.
+
+That’s all. No pressure kksksk. 
+
+
+
+
+
+
+Wherever life takes us, I’ll always be grateful that I met you.
+And if ever you need someone who’ll stay—quietly, genuinely, and always on your side—nandito lang ako.
+
+Happy birthday again, Lei😺.
+With all the care in the world,
+
+Josu`;
 
   letterTextBox.innerHTML = "";
   const paragraphs = msg.split("\n\n");
@@ -286,3 +347,41 @@ function renderSubtitle() {
 document.getElementById("btn-box").addEventListener("click", () => {
   window.location.href = "flower.html";
 });
+
+
+
+
+/* === TIME‑SINCE COUNTER (starts 28 Dec 2024) === */
+const counterBox = document.getElementById("time-counter");
+const startDate  = new Date("2024-12-28T00:00:00");
+
+function updateTimeCounter(){
+  const now=new Date();
+  let diff=now-startDate;
+
+  const sec = Math.floor(diff/1000)%60;
+  const min = Math.floor(diff/60000)%60;
+  const hr  = Math.floor(diff/3.6e6)%24;
+
+  // crude month/year/day roll‑over
+  let years = now.getFullYear()-startDate.getFullYear();
+  let months= now.getMonth() - startDate.getMonth();
+  let days  = now.getDate()  - startDate.getDate();
+  if(days<0){months--;days+=new Date(now.getFullYear(),now.getMonth(),0).getDate();}
+  if(months<0){years--;months+=12;}
+
+  const parts=[years,months,days,hr,min,sec];
+
+  counterBox.innerHTML="";
+  parts.forEach((num,i)=>{
+    const span=document.createElement("span");
+    span.className="glow-word";
+    span.textContent=num.toString().padStart(2,"0");
+    span.style.animationDelay=`${i*0.25}s`;     // wave offset
+    span.style.animationDuration=`${4-i*0.25}s`; // later numbers flash quicker
+    counterBox.appendChild(span);
+  });
+}
+
+updateTimeCounter();
+setInterval(updateTimeCounter,1000);
