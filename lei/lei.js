@@ -19,7 +19,30 @@ window.onload = () => {
   const fade = document.getElementById("light-fade");
   fade.classList.add("fade-out");
   setTimeout(() => fade.remove(), 1600);
+
+  // 👇 Auto-rebind tap to ensure music resumes after return
+  document.body.addEventListener("click", resumeMusicOnce, { once: true });
 };
+
+
+
+// === Check and Resume Music on Return ===
+window.addEventListener("DOMContentLoaded", () => {
+  if (document.readyState === "complete") {
+    // Only fade in music if user already opened once
+    document.body.addEventListener("click", resumeMusicOnce, { once: true });
+  }
+});
+
+function resumeMusicOnce() {
+  if (music.paused) {
+    music.loop = true;
+    music.currentTime = 0;
+    fadeInMusic();
+  }
+}
+
+
 
 // === MUSIC FUNCTIONS ===
 function fadeInMusic() {
