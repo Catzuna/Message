@@ -284,12 +284,12 @@ body::-webkit-scrollbar { display: none; }
 
 /* 📝 Letter Text */
 #letter-text {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Lora', serif;
   white-space: normal;
   word-break: break-word;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   color: #222;
-  line-height: 1.85;
+  line-height: 1.75;
   user-select: none;
   text-align: justify;
   padding-top: 10px;
@@ -308,7 +308,7 @@ body::-webkit-scrollbar { display: none; }
 .glow-word {
   display: inline-block;
   margin-right: 5px;
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Lora', serif;
   color: #222;
   text-shadow: 0 0 2px #caaeff, 0 0 6px #eecbff;
   animation: glowPurpleWave 7s ease-in-out infinite; /* slower */
