@@ -284,7 +284,7 @@ body::-webkit-scrollbar { display: none; }
 
 /* 📝 Letter Text */
 #letter-text {
-  font-family: 'Crimson Text', Georgia, serif;
+  font-family: 'Dancing Script', cursive;
   white-space: normal;
   word-break: break-word;
   font-size: 1.05rem;
@@ -308,7 +308,7 @@ body::-webkit-scrollbar { display: none; }
 .glow-word {
   display: inline-block;
   margin-right: 5px;
-  font-family: 'Georgia', serif;
+  font-family: 'Dancing Script', cursive;
   color: #222;
   text-shadow: 0 0 2px #caaeff, 0 0 6px #eecbff;
   animation: glowPurpleWave 7s ease-in-out infinite; /* slower */
