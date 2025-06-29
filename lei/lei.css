@@ -306,13 +306,13 @@ body::-webkit-scrollbar { display: none; }
 /* === Letter Glow Purple === */
 .glow-word {
   display: inline-block;
-  margin-right: 5px;
+  margin-right: 5px; /* ✅ keeps space between words */
   font-family: 'Georgia', serif;
   color: #222;
-  text-shadow: 0 0 4px #d6b3ff, 0 0 8px #eecbff, 0 0 12px #caaeff;
+  text-shadow: 0 0 2px #caaeff, 0 0 6px #eecbff;
   animation: glowPurpleWave 3s ease-in-out infinite;
+  opacity: 0.9;
 }
-
 @keyframes glowPurpleWave {
   0%, 100% {
     text-shadow: 0 0 2px #caaeff, 0 0 6px #eecbff;
@@ -323,6 +323,7 @@ body::-webkit-scrollbar { display: none; }
     opacity: 1;
   }
 }
+
 
 
 /* 🔮 Smooth light purple glow pulse */

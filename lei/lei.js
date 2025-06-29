@@ -96,11 +96,14 @@ document.getElementById("btn-message").addEventListener("click", () => {
   fadeOutMusic(() => {
     newMusic.loop = true;
     newMusic.currentTime = 0;
-    fadeInAudio(newMusic);
+
+    // ✅ Guarantee user action before autoplay
+    setTimeout(() => fadeInAudio(newMusic), 500);
   });
 
   renderLetter();
 });
+
 document.getElementById("close-letter").addEventListener("click", () => {
   letterContainer.style.display = "none";
   content.style.display = "block";
@@ -114,6 +117,8 @@ function renderLetter() {
 
 
 I hope today makes you feel as special as you really are—not just because it’s your birthday🎉, but because you deserve to be celebrated every day🎉🥳.
+
+
 
 You’ve come so far, and I hope you’re proud of yourself💜. I know I am.
 Every little thing you do, your strength, your gentleness, your effort—it never goes unnoticed.
@@ -191,7 +196,7 @@ Josu`;
       const span = document.createElement("span");
       span.classList.add("glow-word");
       span.textContent = word + " ";
-      span.style.animationDelay = `${(pIndex * 30 + wIndex) * 0.1}s`;
+      span.style.animationDelay = `${(pIndex * 10 + wIndex) * 0.03}s`;
       p.appendChild(span);
     });
     letterTextBox.appendChild(p);
